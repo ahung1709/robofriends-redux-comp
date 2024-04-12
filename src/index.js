@@ -11,6 +11,7 @@ import App from './containers/App';
 import { searchRobots, requestRobots } from './reducers';
 import 'tachyons';
 // import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const logger = createLogger()
 
@@ -28,3 +29,9 @@ root.render(
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 // registerServiceWorker();
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
+// serviceWorkerRegistration.unregister();
